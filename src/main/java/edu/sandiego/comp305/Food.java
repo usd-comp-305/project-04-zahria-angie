@@ -2,7 +2,9 @@ package edu.sandiego.comp305;
 
 public abstract class Food {
     String item;
+
     double price;
+
     String flavor;
 
     public Food(final String name, final String flavor, final double price) {
