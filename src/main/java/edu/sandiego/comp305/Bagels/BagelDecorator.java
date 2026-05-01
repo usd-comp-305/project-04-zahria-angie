@@ -3,7 +3,7 @@ package edu.sandiego.comp305.Bagels;
 public abstract class BagelDecorator implements Bagel{
     Bagel flavoredBagel;
 
-    public BagelDecorator(Bagel bagel) {
+    public BagelDecorator(final Bagel bagel) {
         this.flavoredBagel = bagel;
     }
 

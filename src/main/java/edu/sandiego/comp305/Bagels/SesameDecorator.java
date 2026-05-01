@@ -1,7 +1,7 @@
 package edu.sandiego.comp305.Bagels;
 
 public class SesameDecorator extends BagelDecorator {
-    public SesameDecorator(Bagel bagel) {
+    public SesameDecorator(final Bagel bagel) {
         super(bagel);
     }
 
