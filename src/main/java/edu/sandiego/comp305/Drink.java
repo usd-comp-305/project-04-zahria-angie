@@ -23,9 +23,7 @@ public abstract class Drink {
     public String getItem() {
         if (isIced) {
             return (item + " (Iced)");
-        }
-
-        else {
+        } else {
             return item;
         }
     }
