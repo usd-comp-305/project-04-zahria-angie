@@ -1,7 +1,7 @@
 package edu.sandiego.comp305.Bagels;
 
 public class BlueberryDecorator extends BagelDecorator {
-    public BlueberryDecorator(Bagel bagel) {
+    public BlueberryDecorator(final Bagel bagel) {
         super(bagel);
     }
 
