@@ -2,6 +2,7 @@ package edu.sandiego.comp305;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
 
@@ -42,9 +43,9 @@ public class Order {
             drink.prepare();
         }
 
-        for (Food food : foods) {
-            food.prepare();
-        }
+        //for (Food food : foods) {
+        //    food.prepare();
+        //}
     }
 
     public void printReceipt() {
