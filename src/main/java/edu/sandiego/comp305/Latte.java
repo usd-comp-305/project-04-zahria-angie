@@ -2,7 +2,7 @@ package edu.sandiego.comp305;
 
 public class Latte extends Drink {
 
-    public Latte(boolean isIced) {
+    public Latte(final boolean isIced) {
         super("Latte", 5, isIced);
     }
 

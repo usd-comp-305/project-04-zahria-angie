@@ -2,7 +2,7 @@ package edu.sandiego.comp305;
 
 public class Cappuccino extends Drink {
 
-    public Cappuccino(boolean isIced) {
+    public Cappuccino(final boolean isIced) {
         super("Cappuccino", 5.5, false);
     }
 

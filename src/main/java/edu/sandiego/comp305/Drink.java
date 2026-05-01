@@ -8,7 +8,7 @@ public abstract class Drink {
 
     private final boolean isIced;
 
-    public Drink( String item,  double price, boolean isIced) {
+    public Drink(final String item,  final double price, final boolean isIced) {
         this.item = item;
         this.price = price;
         this.isIced = isIced;
@@ -21,7 +21,12 @@ public abstract class Drink {
     }
 
     public String getItem() {
-        return isIced ? item + " (Iced)" : item;
-    }
+        if (isIced) {
+            return (item + " (Iced)");
+        }
 
+        else {
+            return item;
+        }
+    }
 }
