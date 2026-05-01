@@ -2,19 +2,15 @@ package edu.sandiego.comp305;
 
 public abstract class Drink {
 
-    String item;
+    private final String item;
 
-    double price;
+    private final double price;
 
-    String size; // small, medium, large
+    private final boolean isIced;
 
-    boolean isIced;
-
-    public Drink(final String item, final double price,
-                 final String size, final boolean isIced) {
+    public Drink( String item,  double price, boolean isIced) {
         this.item = item;
         this.price = price;
-        this.size = size;
         this.isIced = isIced;
     }
 
@@ -25,14 +21,7 @@ public abstract class Drink {
     }
 
     public String getItem() {
-        return item;
+        return isIced ? item + " (Iced)" : item;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public boolean getIsIced() {
-        return isIced;
-    }
 }
