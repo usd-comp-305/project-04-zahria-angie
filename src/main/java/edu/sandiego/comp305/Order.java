@@ -51,11 +51,11 @@ public class Order {
         System.out.println("\nReceipt for " + customerName);
 
         for (Drink drink : drinks) {
-            System.out.println(drink.getName() + " - $" + drink.getPrice());
+            System.out.println(drink.getItem() + " - $" + drink.getPrice());
         }
 
         for (Food food : foods) {
-            System.out.println(food.getName() + " - $" + food.getPrice());
+            System.out.println(food.getItem() + " - $" + food.getPrice());
         }
 
         System.out.println("Total: $" + calculateTotal());
