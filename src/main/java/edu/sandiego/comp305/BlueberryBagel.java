@@ -1,7 +1,7 @@
 package edu.sandiego.comp305;
 
 public class BlueberryBagel extends BagelFlavor{
-    public BlueberryBagel(Bagel bagel) {
+    public BlueberryBagel(final Bagel bagel) {
         this.bagel = bagel;
     }
 

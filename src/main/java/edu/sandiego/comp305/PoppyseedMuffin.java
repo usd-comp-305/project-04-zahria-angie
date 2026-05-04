@@ -1,7 +1,7 @@
 package edu.sandiego.comp305;
 
 public class PoppyseedMuffin extends MuffinFlavor{
-    public PoppyseedMuffin(Muffin muffin) {
+    public PoppyseedMuffin(final Muffin muffin) {
         this.muffin = muffin;
     }
 

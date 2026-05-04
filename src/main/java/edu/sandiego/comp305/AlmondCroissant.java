@@ -1,7 +1,7 @@
 package edu.sandiego.comp305;
 
 public class AlmondCroissant extends CroissantFlavor{
-    public AlmondCroissant(Croissant croissant){
+    public AlmondCroissant(final Croissant croissant){
         this.croissant = croissant;
     }
 
