@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CafeSimulator {
-    private final Scanner scanner = new Scanner(System.in);
-
-    private ArrayList<Order> orders = new ArrayList<>();
+    private final Scanner scanner = new Scanner(System.in,
+            java.nio.charset.StandardCharsets.UTF_8);
 
     public void start() {
         System.out.println("=====================");

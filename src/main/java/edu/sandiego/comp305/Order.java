@@ -1,5 +1,6 @@
 package edu.sandiego.comp305;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -13,8 +14,8 @@ public class Order {
     public Order(final String customerName,
                  final List<Drink> drinks, final List<Food> foods) {
         this.customerName = customerName;
-        this.drinks = drinks;
-        this.foods = foods;
+        this.drinks = new ArrayList<>(drinks);
+        this.foods = new ArrayList<>(foods);
     }
 
     public void addDrink(final Drink drink) {
