@@ -7,7 +7,7 @@ public class PoppyseedMuffin extends MuffinFlavor{
 
     @Override
     public String getDescription(){
-        return "Poppyseed Muffin " + muffin.getDescription();
+        return "Poppyseed " + muffin.getDescription();
     }
 
     @Override

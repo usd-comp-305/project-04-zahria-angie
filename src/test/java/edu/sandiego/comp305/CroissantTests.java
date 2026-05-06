@@ -2,6 +2,8 @@ package edu.sandiego.comp305;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CroissantTests {
     @Test
     public void testChocolateCroissant() {
@@ -26,21 +28,23 @@ public class CroissantTests {
     @Test
     public void testPlainCroissantPrice() {
         final Croissant croissant = new ConcreteCroissant();
-        assert(croissant.getPrice() == 3.99);
+        assertEquals(3.99, croissant.getPrice(), 0.001);
     }
 
     @Test
     public void testAlmondCroissantPrice() {
         Croissant croissant = new ConcreteCroissant();
         croissant = new AlmondCroissant(croissant);
-        assert(croissant.getPrice() == 5.99);
+        assertEquals(5.99, croissant.getPrice(), 0.001);
+
     }
 
     @Test
     public void testChocolateCroissantPrice() {
         Croissant croissant = new ConcreteCroissant();
         croissant = new ChocolateCroissant(croissant);
-        assert(croissant.getPrice() ==6.99);
+        assertEquals(6.99, croissant.getPrice(), 0.001);
+
     }
 
 
