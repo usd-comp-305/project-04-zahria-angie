@@ -1,7 +1,7 @@
 package edu.sandiego.comp305;
 
 public class EverythingBagel extends BagelFlavor{
-    public EverythingBagel(Bagel bagel) {
+    public EverythingBagel(final Bagel bagel) {
 
         this.bagel = bagel;
     }

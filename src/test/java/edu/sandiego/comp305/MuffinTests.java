@@ -1,4 +1,5 @@
 package edu.sandiego.comp305;
+
 import org.junit.jupiter.api.Test;
 
 public class MuffinTests {
@@ -18,13 +19,13 @@ public class MuffinTests {
 
     @Test
     public void testPlainMuffin() {
-        Muffin muffin = new ConcreteMuffin();
+        final Muffin muffin = new ConcreteMuffin();
         assert(muffin.getDescription().equals("Muffin"));
     }
 
     @Test
     public void testPlainMuffinPrice() {
-        Muffin muffin = new ConcreteMuffin();
+        final Muffin muffin = new ConcreteMuffin();
         assert(muffin.getPrice() == 2.99);
     }
 

@@ -1,4 +1,5 @@
 package edu.sandiego.comp305;
+
 import org.junit.jupiter.api.Test;
 
 public class CroissantTests {
@@ -18,13 +19,13 @@ public class CroissantTests {
 
     @Test
     public void testPlainCroissant() {
-        Croissant croissant = new ConcreteCroissant();
+        final Croissant croissant = new ConcreteCroissant();
         assert(croissant.getDescription().equals("Croissant"));
     }
 
     @Test
     public void testPlainCroissantPrice() {
-        Croissant croissant = new ConcreteCroissant();
+        final Croissant croissant = new ConcreteCroissant();
         assert(croissant.getPrice() == 3.99);
     }
 

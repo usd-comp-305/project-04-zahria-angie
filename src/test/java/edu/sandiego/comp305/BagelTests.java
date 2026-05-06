@@ -1,8 +1,7 @@
 package edu.sandiego.comp305;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+
 
 public class BagelTests {
     @Test
@@ -21,13 +20,13 @@ public class BagelTests {
 
     @Test
     public void testPlainBagel() {
-        Bagel bagel = new ConcreteBagel();
+        final Bagel bagel = new ConcreteBagel();
         assert(bagel.getDescription().equals("Bagel"));
     }
 
     @Test
     public void testPlainBagelPrice() {
-        Bagel bagel = new ConcreteBagel();
+        final Bagel bagel = new ConcreteBagel();
         assert(bagel.getPrice() == 2.99);
     }
 
