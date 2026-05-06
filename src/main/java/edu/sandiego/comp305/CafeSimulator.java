@@ -8,9 +8,9 @@ public class CafeSimulator {
     private ArrayList<Order> orders = new ArrayList<>();
 
     public void start() {
-        System.out.println("======================");
+        System.out.println("=====================");
         System.out.println(" WELCOME TO OOP CAFE ");
-        System.out.println("======================");
+        System.out.println("=====================");
 
         System.out.println("Customer Name:");
         String name = scanner.nextLine();
@@ -56,7 +56,7 @@ public class CafeSimulator {
         System.out.println("Selection: ");
         String choice = scanner.nextLine();
 
-        System.out.println("Iced? (y/n": );
+        System.out.println("Iced? (y/n):" );
         boolean iced = scanner.nextLine().equalsIgnoreCase("y");
 
         switch (choice) {
