@@ -8,12 +8,12 @@ public class Order {
     private final String customerName;
     //private final List<Drink> drinks;
 
-    private final List<Food> foods;
+    //private final List<Food> foods;
 
     public Order(final String customerName) {
         this.customerName = customerName;
         //this.drinks = new ArrayList<>();
-        this.foods = new ArrayList<>();
+        //this.foods = new ArrayList<>();
     }
 
     //public void addDrink(Drink drink) {
