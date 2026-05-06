@@ -14,4 +14,9 @@ public class ChocolateCroissant extends CroissantFlavor {
     public double getPrice() {
         return croissant.getPrice() + 3.00;
     }
+
+    @Override
+    public void prepare() {
+        System.out.println("Mixing chocolate...");
+    }
 }

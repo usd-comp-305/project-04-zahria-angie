@@ -14,5 +14,10 @@ public class ConcreteBagel extends Bagel{
         return 2.99;
     }
 
+    @Override
+    public void prepare() {
+        System.out.println("Preparing bagel...");
+    }
+
 
 }

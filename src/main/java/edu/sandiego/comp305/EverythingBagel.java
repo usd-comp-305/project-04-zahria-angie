@@ -16,4 +16,9 @@ public class EverythingBagel extends BagelFlavor{
 
         return bagel.getPrice() + 3.00;
     }
+
+    @Override
+    public void prepare(){
+        System.out.println("Sprinkling everything seasoning...");
+    }
 }

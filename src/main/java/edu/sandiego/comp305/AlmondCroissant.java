@@ -15,5 +15,9 @@ public class AlmondCroissant extends CroissantFlavor{
         return croissant.getPrice() + 2.00;
     }
 
+    public void prepare(){
+        System.out.println("Adding almonds...");
+    }
+
 
 }

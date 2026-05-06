@@ -5,4 +5,5 @@ public abstract class BagelFlavor extends Bagel {
     Bagel bagel;
     public abstract String getDescription();
     public abstract double getPrice();
+    public abstract void prepare();
 }

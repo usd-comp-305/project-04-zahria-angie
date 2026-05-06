@@ -14,4 +14,9 @@ public class ConcreteCroissant extends Croissant{
     public double getPrice() {
         return 3.99;
     }
+
+    @Override
+    public void prepare() {
+        System.out.println("Preparing croissant...");
+    }
 }
