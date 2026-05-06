@@ -1,11 +1,11 @@
 package edu.sandiego.comp305;
 
 public abstract class Food {
-    String item;
+    private final String item;
 
-    double price;
+    private final double price;
 
-    String flavor;
+    private final String flavor;
 
     public Food(final String name, final String flavor, final double price) {
         this.item = name; //user input

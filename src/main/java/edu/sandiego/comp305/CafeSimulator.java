@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CafeSimulator {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
+
     private ArrayList<Order> orders = new ArrayList<>();
 
     public void start() {
@@ -13,10 +14,11 @@ public class CafeSimulator {
         System.out.println("=====================");
 
         System.out.println("Customer Name:");
-        String name = scanner.nextLine();
+        final String name = scanner.nextLine();
         // add in case when name is blank
 
-        Order order = new Order(name);
+        final Order order = new Order(name,
+                new ArrayList<>(), new ArrayList<>());
         takeOrder(order);
 
         System.out.println("\n---Preparing Order---");
@@ -28,12 +30,12 @@ public class CafeSimulator {
         System.out.println("\nOrder Complete!\n");
     }
 
-    private void takeOrder(Order order) {
+    private void takeOrder(final Order order) {
         boolean adding = true;
         while (adding) {
             System.out.println("MENU: [1] Drink  [2] Food  [3] Checkout");
             System.out.println("Selection: ");
-            String category = scanner.nextLine();
+            final String category = scanner.nextLine();
 
             if (category.equals("3")) {
                 adding = false;
@@ -47,33 +49,37 @@ public class CafeSimulator {
         }
     }
 
-    private void handleDrinkSelection(Order order) {
+    private void handleDrinkSelection(final Order order) {
         System.out.println("\n---Drinks---");
         System.out.println("[1] Americano");
         System.out.println("[2] Latte");
         System.out.println("[3] Cappuccino");
         System.out.println("[4] Black Coffee");
         System.out.println("Selection: ");
-        String choice = scanner.nextLine();
+        final String choice = scanner.nextLine();
 
         System.out.println("Iced? (y/n):" );
-        boolean iced = scanner.nextLine().equalsIgnoreCase("y");
+        final boolean iced = scanner.nextLine().equalsIgnoreCase("y");
 
         switch (choice) {
             case "1":
                 order.addDrink(new Americano(iced));
+                break;
             case "2":
                 order.addDrink(new Latte(iced));
+                break;
             case "3":
                 order.addDrink(new Cappuccino(iced));
+                break;
             case "4":
                 order.addDrink(new BlackCoffee(iced));
+                break;
             default:
                 System.out.println("Drink unavailable");
         }
     }
 
-    private void handleFoodSelection(Order order) {
+    private void handleFoodSelection(final Order order) {
         //same thing as handleDrinkSelection but tbd
         //due to Decorator pattern...
     }
