@@ -14,4 +14,10 @@ public class PoppyseedMuffin extends MuffinFlavor{
     public double getPrice(){
         return muffin.getPrice() + 4.00;
     }
+
+    @Override
+    public void prepare(){
+        System.out.println("Adding poppyseeds...");
+    }
+
 }

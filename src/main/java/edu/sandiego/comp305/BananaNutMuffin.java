@@ -13,4 +13,9 @@ public class BananaNutMuffin extends MuffinFlavor{
     @Override public double getPrice(){
         return muffin.getPrice() + 3.00;
     }
+
+    @Override
+    public void prepare(){
+        System.out.println("Adding bananas and nuts...");
+    }
 }

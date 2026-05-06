@@ -6,4 +6,6 @@ public abstract class Bagel {
     public abstract String getDescription();
 
     public abstract double getPrice();
+
+    public abstract void prepare();
 }

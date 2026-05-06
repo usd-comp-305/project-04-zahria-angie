@@ -15,4 +15,9 @@ public class BlueberryBagel extends BagelFlavor{
     public double getPrice(){
         return bagel.getPrice() + 2.00;
     }
+
+    @Override
+    public void prepare() {
+        System.out.println("Adding blueberries...");
+    }
 }

@@ -5,7 +5,7 @@ public abstract class Croissant {
 
     public abstract String getDescription();
 
-
-
     public abstract double getPrice();
+
+    public abstract void prepare();
 }
