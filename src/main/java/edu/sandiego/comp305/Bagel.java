@@ -1,6 +1,9 @@
 package edu.sandiego.comp305;
 
 public abstract class Bagel {
-    public void prepare(){
-    }
+    String description;
+
+    public abstract String getDescription();
+
+    public abstract double getPrice();
 }
