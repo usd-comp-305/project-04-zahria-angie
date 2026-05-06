@@ -20,9 +20,9 @@ public class Order {
     //    drinks.add(drink);
     //}
 
-    public void addFood(final Food food) {
-        foods.add(food);
-    }
+    //public void addFood(final Food food) {
+    //    foods.add(food);
+    //}
 
     public double calculateTotal() {
         double total = 0.0;
@@ -31,9 +31,9 @@ public class Order {
         //    total += drink.getPrice();
         //}
 
-        for (Food food : foods) {
-            total += food.getPrice();
-        }
+        //for (Food food : foods) {
+        //    total += food.getPrice();
+        //}
 
         return total;
     }
@@ -55,9 +55,9 @@ public class Order {
         //    System.out.println(drink.getItem() + " - $" + drink.getPrice());
         //}
 
-        for (Food food : foods) {
-            System.out.println(food.getItem() + " - $" + food.getPrice());
-        }
+        //for (Food food : foods) {
+        //    System.out.println(food.getItem() + " - $" + food.getPrice());
+        //}
 
         System.out.println("Total: $" + calculateTotal());
     }
