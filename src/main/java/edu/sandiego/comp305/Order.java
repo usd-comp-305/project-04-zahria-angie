@@ -25,7 +25,7 @@ public class Order {
     //}
 
     public double calculateTotal() {
-        double total = 0.0;
+        final double total = 0.0;
 
         //for (Drink drink : drinks) {
         //    total += drink.getPrice();
