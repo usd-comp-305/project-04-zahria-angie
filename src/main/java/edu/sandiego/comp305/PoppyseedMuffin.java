@@ -1,13 +1,13 @@
 package edu.sandiego.comp305;
 
 public class PoppyseedMuffin extends MuffinFlavor{
-    public PoppyseedMuffin(Muffin muffin) {
+    public PoppyseedMuffin(final Muffin muffin) {
         this.muffin = muffin;
     }
 
     @Override
     public String getDescription(){
-        return "Poppyseed Muffin " + muffin.getDescription();
+        return "Poppyseed " + muffin.getDescription();
     }
 
     @Override

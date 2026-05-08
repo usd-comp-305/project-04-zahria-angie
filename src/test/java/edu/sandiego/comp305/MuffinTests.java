@@ -1,5 +1,9 @@
 package edu.sandiego.comp305;
+
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class MuffinTests {
     @Test
@@ -18,27 +22,27 @@ public class MuffinTests {
 
     @Test
     public void testPlainMuffin() {
-        Muffin muffin = new ConcreteMuffin();
+        final Muffin muffin = new ConcreteMuffin();
         assert(muffin.getDescription().equals("Muffin"));
     }
 
     @Test
     public void testPlainMuffinPrice() {
-        Muffin muffin = new ConcreteMuffin();
-        assert(muffin.getPrice() == 2.99);
+        final Muffin muffin = new ConcreteMuffin();
+        assertEquals(2.99, muffin.getPrice(), 0.001);
     }
 
     @Test
     public void testBananaNutMuffinPrice() {
         Muffin muffin = new ConcreteMuffin();
         muffin = new BananaNutMuffin(muffin);
-        assert(muffin.getPrice() == 5.99);
+        assertEquals(5.99, muffin.getPrice(), 0.001);
     }
 
     @Test
     public void testPoppyseedMuffinPrice() {
         Muffin muffin = new ConcreteMuffin();
         muffin = new PoppyseedMuffin(muffin);
-        assert(muffin.getPrice() == 6.99);
+        assertEquals(6.99, muffin.getPrice(), 0.001);
     }
 }
