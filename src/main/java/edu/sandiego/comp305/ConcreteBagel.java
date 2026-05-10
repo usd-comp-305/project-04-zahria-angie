@@ -1,8 +1,8 @@
+
 package edu.sandiego.comp305;
 
-public class ConcreteBagel extends Bagel{
-    public ConcreteBagel(){
-
+public class ConcreteBagel extends Bagel {
+    public ConcreteBagel() {
         this.description = "Bagel";
     }
 
@@ -12,16 +12,12 @@ public class ConcreteBagel extends Bagel{
     }
 
     @Override
-    public double getPrice(){
-
+    public double getPrice() {
         return 2.99;
     }
 
     @Override
     public void prepare() {
-
         System.out.println("Preparing bagel...");
     }
-
-
 }

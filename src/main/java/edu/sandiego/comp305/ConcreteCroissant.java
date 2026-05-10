@@ -1,18 +1,19 @@
+
 package edu.sandiego.comp305;
 
-public class ConcreteCroissant extends Croissant{
-    public ConcreteCroissant(){
+public class ConcreteCroissant extends Croissant {
+    public ConcreteCroissant() {
         this.description = "Croissant";
     }
 
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return this.description;
     }
 
     @Override
     public double getPrice() {
-        return 3.99;
+        return 4.99;
     }
 
     @Override

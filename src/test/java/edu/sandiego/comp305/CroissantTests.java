@@ -29,21 +29,21 @@ public class CroissantTests {
     @Test
     public void testPlainCroissantPrice() {
         final Croissant croissant = new ConcreteCroissant();
-        assertEquals(3.99, croissant.getPrice(), 0.001);
+        assertEquals(4.99, croissant.getPrice(), 0.001);
     }
 
     @Test
     public void testAlmondCroissantPrice() {
         Croissant croissant = new ConcreteCroissant();
         croissant = new AlmondCroissant(croissant);
-        assertEquals(5.99, croissant.getPrice(), 0.001);
+        assertEquals(6.49, croissant.getPrice(), 0.001);
     }
 
     @Test
     public void testChocolateCroissantPrice() {
         Croissant croissant = new ConcreteCroissant();
         croissant = new ChocolateCroissant(croissant);
-        assertEquals(6.99, croissant.getPrice(), 0.001);
+        assertEquals(6.24, croissant.getPrice(), 0.001);
     }
 
 

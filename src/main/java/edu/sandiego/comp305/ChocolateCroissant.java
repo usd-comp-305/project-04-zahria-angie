@@ -1,8 +1,9 @@
+
 package edu.sandiego.comp305;
 
 public class ChocolateCroissant extends CroissantFlavor {
-    public ChocolateCroissant(final Croissant croissant){
-        this.croissant = croissant;
+    public ChocolateCroissant(final Croissant croissant) {
+        super(croissant);
     }
 
     @Override
@@ -12,11 +13,12 @@ public class ChocolateCroissant extends CroissantFlavor {
 
     @Override
     public double getPrice() {
-        return croissant.getPrice() + 3.00;
+        return croissant.getPrice() + 1.25;
     }
 
     @Override
     public void prepare() {
-        System.out.println("Mixing chocolate...");
+        croissant.prepare();
+        System.out.println("Mixing in chocolate...");
     }
 }
