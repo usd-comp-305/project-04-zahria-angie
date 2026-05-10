@@ -2,21 +2,23 @@ package edu.sandiego.comp305;
 
 import java.util.Scanner;
 
+import java.nio.charset.StandardCharsets;
+
 public class CashPayment implements PaymentStrategy{
     @Override
-    public void processPayment(double amount, double paidAmount) {
-        Scanner scanner = new Scanner(System.in);
+    public void processPayment(final double amount, final double paidAmount) {
+        final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
         double totalPaid = paidAmount;
 
         while (totalPaid < amount){
-            double remaining = amount -totalPaid;
-            System.out.printf("Insufficient payment. Please pay the remainder: " + remaining);
+            final double remaining = amount -totalPaid;
+            System.out.printf("Insufficient payment, remainder: " + remaining);
             totalPaid = scanner.nextDouble();
         }
 
-        double change = totalPaid - amount;
+        final double change = totalPaid - amount;
         if (change > 0){
-            System.out.printf("Payment accepted! Your change is: $%.2f%n", change);
+            System.out.printf("Payment accepted! Change: $%.2f%n", change);
         } else{
             System.out.println("Payment accepted!");
         }

@@ -1,5 +1,8 @@
 package edu.sandiego.comp305;
+
 import java.util.Scanner;
+
+import java.nio.charset.StandardCharsets;
 
 public class Order {
 
@@ -61,18 +64,18 @@ public class Order {
     }
 
     public void completePayment(){
-        Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
         System.out.println("How will you be paying?");
         System.out.print("Cash || Card");
-        String userPaymentMethod = scanner.nextLine();
+        final String userPaymentMethod = scanner.nextLine();
 
-        ProcessPayment processor = new ProcessPayment();
+        final ProcessPayment processor = new ProcessPayment();
 
         if (userPaymentMethod.equalsIgnoreCase("Cash")) {
             processor.setPaymentStrategy(new CashPayment());
-            System.out.println("Your total is $" + calculateTotal() + ", please pay here: ");
-            double paidAmount = scanner.nextDouble();
+            System.out.println("Your total is $" + calculateTotal() + ": ");
+            final double paidAmount = scanner.nextDouble();
             processor.processPayment(calculateTotal(), paidAmount);
 
         } else if (userPaymentMethod.equalsIgnoreCase("Card")) {
