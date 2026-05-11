@@ -7,7 +7,8 @@ public class BlackCoffee extends Drink {
 
     @Override
     public void prepare() {
-        System.out.println("Brewing " + getItem() + "...");
+        super.prepare();
+        System.out.println("Brewing coffee beans");
     }
 
 }

@@ -8,7 +8,7 @@ public class Latte extends Drink {
 
     @Override
     public void prepare() {
-        System.out.println("Preparing " + getItem() + "...");
+        super.prepare();
         System.out.println("Espresso + Steamed Milk");
     }
 }
