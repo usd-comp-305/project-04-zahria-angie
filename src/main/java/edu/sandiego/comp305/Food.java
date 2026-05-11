@@ -1,27 +1,18 @@
 package edu.sandiego.comp305;
 
 public abstract class Food {
+<<<<<<< simulator
     private final String item;
 
     private final double price;
 
     private final String flavor;
+=======
 
-    public Food(final String name, final String flavor, final double price) {
-        this.item = name; //user input
-        this.flavor = flavor; //user input
-        this.price = price; //predetermined
-    }
+    public abstract String getDescription();
 
-    public String getItem() {
-        return item;
-    }
+    public abstract double getPrice();
+>>>>>>> main
 
-    public String getFlavor() {
-        return flavor;
-    }
-
-    public double getPrice() {
-        return price;
-    }
+    public abstract void prepare();
 }
