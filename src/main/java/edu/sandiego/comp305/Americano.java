@@ -7,8 +7,7 @@ public class Americano extends Drink {
     }
 
     @Override
-    public void prepare() {
-        System.out.println("Preparing " + getItem() + "...");
+    protected void extraPrep() {
         System.out.println("Espresso + Water");
     }
 }

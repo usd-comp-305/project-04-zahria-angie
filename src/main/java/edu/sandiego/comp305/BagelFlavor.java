@@ -1,8 +1,12 @@
 
 package edu.sandiego.comp305;
 
-public abstract class Bagel extends Food {
-    protected String description;
+public abstract class BagelFlavor extends Bagel {
+    protected Bagel bagel;
+
+    public BagelFlavor(final Bagel bagel) {
+        this.bagel = bagel;
+    }
 
     public abstract String getDescription();
 
