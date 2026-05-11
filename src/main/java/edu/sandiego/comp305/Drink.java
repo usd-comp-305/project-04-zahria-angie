@@ -14,9 +14,12 @@ public abstract class Drink {
         this.isIced = isIced;
     }
 
-    public void prepare() {
+    public final void prepare() {
         System.out.println("Preparing " + getItem() + "...");
+        extraPrep();
     }
+
+    protected abstract void extraPrep();
 
     public double getPrice() {
         return price;

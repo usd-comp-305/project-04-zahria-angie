@@ -7,9 +7,7 @@ public class Cappuccino extends Drink {
     }
 
     @Override
-    public void prepare() {
-        super.prepare();
+    protected void extraPrep() {
         System.out.println("Espresso + Steamed Milk + Foam");
     }
-
 }
