@@ -1,9 +1,9 @@
+
 package edu.sandiego.comp305;
 
-public class ConcreteMuffin extends Muffin{
-    public ConcreteMuffin(){
+public class ConcreteMuffin extends Muffin {
+    public ConcreteMuffin() {
         this.description = "Muffin";
-
     }
 
     @Override
@@ -12,12 +12,12 @@ public class ConcreteMuffin extends Muffin{
     }
 
     @Override
-    public double getPrice(){
-        return 2.99;
+    public double getPrice() {
+        return 3.99;
     }
 
     @Override
-    public void prepare(){
+    public void prepare() {
         System.out.println("Preparing muffin...");
     }
 }

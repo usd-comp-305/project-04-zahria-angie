@@ -1,8 +1,12 @@
+
 package edu.sandiego.comp305;
 
-
 public abstract class BagelFlavor extends Bagel {
-    Bagel bagel;
+    protected Bagel bagel;
+
+    public BagelFlavor(final Bagel bagel) {
+        this.bagel = bagel;
+    }
 
     public abstract String getDescription();
 

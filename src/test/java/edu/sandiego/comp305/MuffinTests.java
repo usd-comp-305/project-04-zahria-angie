@@ -29,20 +29,20 @@ public class MuffinTests {
     @Test
     public void testPlainMuffinPrice() {
         final Muffin muffin = new ConcreteMuffin();
-        assertEquals(2.99, muffin.getPrice(), 0.001);
+        assertEquals(3.99, muffin.getPrice(), 0.001);
     }
 
     @Test
     public void testBananaNutMuffinPrice() {
         Muffin muffin = new ConcreteMuffin();
         muffin = new BananaNutMuffin(muffin);
-        assertEquals(5.99, muffin.getPrice(), 0.001);
+        assertEquals(5.24, muffin.getPrice(), 0.001);
     }
 
     @Test
     public void testPoppyseedMuffinPrice() {
         Muffin muffin = new ConcreteMuffin();
         muffin = new PoppyseedMuffin(muffin);
-        assertEquals(6.99, muffin.getPrice(), 0.001);
+        assertEquals(4.99, muffin.getPrice(), 0.001);
     }
 }

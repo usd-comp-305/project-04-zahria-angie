@@ -1,5 +1,9 @@
 package edu.sandiego.comp305;
 
+import java.util.Scanner;
+
+import java.nio.charset.StandardCharsets;
+
 public class Order {
 
     private final String customerName;
@@ -57,5 +61,32 @@ public class Order {
         //}
 
         System.out.println("Total: $" + calculateTotal());
+    }
+
+    public void completePayment(){
+        final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+
+        System.out.println("How will you be paying?");
+        System.out.print("Cash || Card");
+        final String userPaymentMethod = scanner.nextLine();
+
+        final ProcessPayment processor = new ProcessPayment();
+
+        if (userPaymentMethod.equalsIgnoreCase("Cash")) {
+            processor.setPaymentStrategy(new CashPayment());
+            System.out.println("Your total is $" + calculateTotal() + ": ");
+            final double paidAmount = scanner.nextDouble();
+            processor.processPayment(calculateTotal(), paidAmount);
+
+        } else if (userPaymentMethod.equalsIgnoreCase("Card")) {
+            processor.setPaymentStrategy(new CardPayment());
+            processor.processPayment(calculateTotal(), calculateTotal());
+
+        } else{
+            System.out.println("Invalid payment method.");
+        }
+
+        System.out.println("Thank you! Your order will be out shortly.");
+        scanner.close();
     }
 }

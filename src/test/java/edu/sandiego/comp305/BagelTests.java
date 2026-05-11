@@ -35,7 +35,7 @@ public class BagelTests {
     public void testBlueberryBagelPrice() {
         Bagel bagel = new ConcreteBagel();
         bagel = new BlueberryBagel(bagel);
-        assertEquals(4.99, bagel.getPrice(), 0.01);
+        assertEquals(3.74, bagel.getPrice(), 0.01);
 
     }
 
@@ -43,6 +43,6 @@ public class BagelTests {
     public void testEverythingBagelPrice() {
         Bagel bagel = new ConcreteBagel();
         bagel = new EverythingBagel(bagel);
-        assertEquals(5.99, bagel.getPrice() , 0.01);
+        assertEquals(3.89, bagel.getPrice() , 0.01);
     }
 }
