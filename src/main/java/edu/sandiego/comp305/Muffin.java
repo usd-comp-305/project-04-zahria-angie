@@ -1,6 +1,12 @@
 package edu.sandiego.comp305;
 
-public class Muffin {
-    public void prepare(){
-    }
+
+public abstract class Muffin  {
+    String description;
+
+    public abstract String getDescription();
+
+    public abstract double getPrice();
+
+    public abstract void prepare();
 }
