@@ -47,6 +47,7 @@ public class CafeSimulator {
                     break;
                 case "2":
                     handleFoodSelection(order);
+                    break;
                 case "3":
                     adding = false;
                     break;
@@ -67,7 +68,7 @@ public class CafeSimulator {
 
         System.out.println("Iced? (y/n):" );
         final boolean iced = scanner.nextLine().equalsIgnoreCase("y");
-        System.out.println(iced ? "Iced selected" : "Hot selected");
+        //System.out.println(iced ? "Iced selected" : "Hot selected");
 
         switch (choice) {
             case "1":
