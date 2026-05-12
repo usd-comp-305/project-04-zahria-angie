@@ -7,9 +7,13 @@ public class CafeSimulator {
     private final Scanner scanner = new Scanner(System.in,
             java.nio.charset.StandardCharsets.UTF_8);
 
+    public static void main(String[] args) {
+        CafeSimulator simulator = new CafeSimulator();
+        simulator.start();
+    }
+
     public void start() {
         printBorder("WELCOME TO OOP CAFE");
-        System.out.println("=====================");
 
         System.out.println("Customer Name:");
         final String name = scanner.nextLine();
@@ -26,7 +30,7 @@ public class CafeSimulator {
         order.printReceipt();
 
         printSection("PAYMENT");
-        //order.completePayment();
+        order.completePayment();
 
         printBorder("ORDER COMPLETE - THANK YOU!");
     }

@@ -54,7 +54,7 @@ public class Order {
     }
 
     public void printReceipt() {
-        System.out.println("\nReceipt for " + customerName);
+        System.out.println("\nReceipt for " + customerName +":");
 
         for (Drink drink : drinks) {
             System.out.println(drink.getItem() + " - $" + drink.getPrice());
@@ -62,17 +62,17 @@ public class Order {
 
         for (Food food : foods) {
             System.out.println(food.getDescription() + " - $" +
-                    food.getDescription());
+                    food.getPrice());
         }
 
-        System.out.println("Total: $%.2f%n" + calculateTotal());
+        System.out.printf("Total: $%.2f%n", calculateTotal());
     }
 
     public void completePayment(){
         final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
         System.out.println("How will you be paying?");
-        System.out.print("Cash || Card");
+        System.out.print("Cash || Card\n");
         final String userPaymentMethod = scanner.nextLine();
 
         final ProcessPayment processor = new ProcessPayment();
@@ -89,9 +89,10 @@ public class Order {
 
         } else {
             System.out.println("Invalid payment method.");
+            return;
         }
 
-        System.out.println("Thank you! Your order will be out shortly.");
+        System.out.println("\nThank you! Your order will be out shortly.");
         scanner.close();
     }
 }
