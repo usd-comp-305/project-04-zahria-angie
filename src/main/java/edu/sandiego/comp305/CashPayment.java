@@ -12,7 +12,8 @@ public class CashPayment implements PaymentStrategy{
 
         while (totalPaid < amount){
             final double remaining = amount -totalPaid;
-            System.out.printf("Insufficient payment, remainder: $%.2f%n", remaining);
+            System.out.printf("Insufficient payment, " +
+                    "remainder: $%.2f%n", remaining);
             totalPaid = scanner.nextDouble();
         }
 

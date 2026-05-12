@@ -7,8 +7,8 @@ public class CafeSimulator {
     private final Scanner scanner = new Scanner(System.in,
             java.nio.charset.StandardCharsets.UTF_8);
 
-    public static void main(String[] args) {
-        CafeSimulator simulator = new CafeSimulator();
+    public static void main(final String[] args) {
+        final CafeSimulator simulator = new CafeSimulator();
         simulator.start();
     }
 
